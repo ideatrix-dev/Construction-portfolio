@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beyond Bricks Construction | Homes &amp; Commercial Construction</title>
+<meta name="description" content="Beyond Bricks Construction builds homes and commercial spaces with clear pricing, stage-wise quality checks and on-time delivery.">
+<style>
+:root{--bg:#faf8f4;--surface:#fff;--ink:#1f1b14;--muted:#6b6458;--accent:#d9762b;--dark:#1d1a12;--line:#e6e0d4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15130e;--surface:#1f1c15;--ink:#f3efe6;--muted:#a69f90;--dark:#0e0d09;--line:#33301f}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.3px}.logo span{color:var(--accent)}
+nav a{margin-left:20px;font-size:.92rem;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:8px;font-weight:600;border:0;cursor:pointer;font-size:1rem}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:inherit}
+.hero{background:var(--dark);color:#f3efe6;padding:80px 0 70px}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:0 0 16px;max-width:760px;letter-spacing:-1px}
+.hero p{max-width:560px;color:#cfc8b8;margin:0 0 28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:48px}
+.stats div{border-top:2px solid var(--accent);padding-top:10px}
+.stats b{font-size:1.8rem;display:block}.stats small{color:#a69f90}
+section{padding:64px 0}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:0 0 8px;letter-spacing:-.5px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card h3{margin:0 0 6px}.card p{margin:0;color:var(--muted);font-size:.95rem}
+.ph{height:130px;border-radius:8px;background:repeating-linear-gradient(45deg,var(--line),var(--line) 10px,transparent 10px,transparent 20px);margin-bottom:14px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.8rem}
+.num{color:var(--accent);font-weight:800;font-size:.85rem;letter-spacing:1px}
+.cities{display:flex;flex-wrap:wrap;gap:10px}
+.cities span{border:1px solid var(--line);background:var(--surface);padding:8px 16px;border-radius:99px;font-size:.92rem}
+.band{background:var(--dark);color:#f3efe6}
+.band .sub{color:#cfc8b8}.band .card{background:#26231a;border-color:#33301f}.band .card p{color:#cfc8b8}
+.price{font-size:2rem;font-weight:800;color:var(--accent)}
+.q{font-style:italic}.who{margin-top:12px;font-size:.85rem;color:var(--muted);font-style:normal}
+form{display:grid;gap:12px;max-width:520px}
+input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin:8px 0 0}
+footer{background:var(--dark);color:#a69f90;padding:40px 0;font-size:.9rem}
+footer .logo{color:#f3efe6}
+@media(max-width:700px){nav a.h{display:none}}
+html{background:#14120d}body{background:transparent}
+#bg3d{position:fixed;inset:0;width:100%;height:100%;z-index:-3}
+#bgvideo{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.tint{position:fixed;inset:0;z-index:-1;background:rgba(14,13,9,.2)}
+.hero{background:linear-gradient(rgba(14,13,9,.15),rgba(14,13,9,.7));padding:130px 0 110px}
+section{background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.band{background:rgba(14,13,9,.84)}
+</style>
+</head>
+<body>
+<canvas id="bg3d"></canvas>
+<video id="bgvideo" autoplay muted loop playsinline preload="auto"><source src="construction.mp4" type="video/mp4" onerror="this.parentNode.style.display='none'"></video>
+<div class="tint"></div>
+<header><div class="wrap nav">
+<a href="#top" class="logo">Beyond <span>Bricks</span></a>
+<nav><a class="h" href="#services">Services</a><a class="h" href="#projects">Projects</a><a class="h" href="#why">Why us</a><a class="h" href="#pricing">Pricing</a><a class="btn" style="color:#fff;margin-left:20px;padding:8px 16px" href="#contact">Get in touch</a></nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+<h1>We build more than walls. We build what lasts.</h1>
+<p>Beyond Bricks Construction delivers homes and commercial spaces from design to handover, with clear pricing and stage-wise quality checks.</p>
+<a class="btn" href="#contact">Start your project</a>
+<div class="stats">
+<div><b>[##]+</b><small>Projects delivered</small></div>
+<div><b>[##]+</b><small>Quality checks</small></div>
+<div><b>[##]</b><small>Sq.ft. built</small></div>
+<div><b>[##]+</b><small>Cities served</small></div>
+</div></div></div>
+
+<section id="services"><div class="wrap">
+<h2>What we build</h2><p class="sub">One team managing design, approvals, materials and construction, so you deal with a single point of contact.</p>
+<div class="grid">
+<div class="card"><div class="ph">Photo</div><h3>Home Construction</h3><p>Independent houses, duplexes and villas, designed and built end to end.</p></div>
+<div class="card"><div class="ph">Photo</div><h3>Commercial Construction</h3><p>Offices, schools, retail and hospitality spaces delivered on schedule.</p></div>
+<div class="card"><div class="ph">Photo</div><h3>Interiors &amp; Renovation</h3><p>Finishing, fit-outs and upgrades for existing buildings.</p></div>
+</div></div></section>
+
+<section id="projects" style="padding-top:0"><div class="wrap">
+<h2>Recent projects</h2><p class="sub">Replace these placeholders with your own completed work.</p>
+<div class="grid">
+<div class="card"><div class="ph">Project photo</div><span class="num">RESIDENTIAL</span><h3>Project name</h3><p>0000 sq.ft. · City</p></div>
+<div class="card"><div class="ph">Project photo</div><span class="num">COMMERCIAL</span><h3>Project name</h3><p>00000 sq.ft. · City</p></div>
+<div class="card"><div class="ph">Project photo</div><span class="num">RESIDENTIAL</span><h3>Project name</h3><p>0000 sq.ft. · City</p></div>
+</div></div></section>
+
+<section class="band" id="why"><div class="wrap">
+<h2>Why Beyond Bricks</h2><p class="sub">Four commitments on every project, big or small.</p>
+<div class="grid">
+<div class="card"><span class="num">01</span><h3>On-time delivery</h3><p>A fixed schedule agreed upfront, with a clear policy if we run late.</p></div>
+<div class="card"><span class="num">02</span><h3>Quality at every stage</h3><p>Inspections at foundation, structure, masonry and finishing before work moves on.</p></div>
+<div class="card"><span class="num">03</span><h3>Safe payments</h3><p>Stage-wise payments tied to verified milestones.</p></div>
+<div class="card"><span class="num">04</span><h3>Transparent pricing</h3><p>A detailed quote and cost breakdown, with changes approved by you first.</p></div>
+</div></div></section>
+
+<section id="pricing"><div class="wrap">
+<h2>Pricing</h2><p class="sub">Clear starting rates for every build.</p>
+<div class="grid">
+<div class="card"><h3>Home Construction</h3><p>Starting at</p><div class="price">₹1,995 / sq.ft</div></div>
+<div class="card"><h3>Commercial Construction</h3><p>Starting at</p><div class="price">₹1,150 / sq.ft</div></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Building in your city</h2><p class="sub">Serving all 31 districts of Karnataka.</p>
+<div class="cities"><span>Bagalkote</span><span>Ballari</span><span>Belagavi</span><span>Bengaluru Rural</span><span>Bengaluru Urban</span><span>Bidar</span><span>Chamarajanagar</span><span>Chikkaballapura</span><span>Chikkamagaluru</span><span>Chitradurga</span><span>Dakshina Kannada</span><span>Davanagere</span><span>Dharwad</span><span>Gadag</span><span>Hassan</span><span>Haveri</span><span>Kalaburagi</span><span>Kodagu</span><span>Kolar</span><span>Koppal</span><span>Mandya</span><span>Mysuru</span><span>Raichur</span><span>Ramanagara</span><span>Shivamogga</span><span>Tumakuru</span><span>Udupi</span><span>Uttara Kannada</span><span>Vijayanagara</span><span>Vijayapura</span><span>Yadgir</span></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Client stories</h2><p class="sub">Use real, permitted client reviews here.</p>
+<div class="grid">
+<div class="card"><p class="q">“Short client testimonial goes here.”</p><p class="who">Client name · 3 BHK</p></div>
+<div class="card"><p class="q">“Short client testimonial goes here.”</p><p class="who">Client name · 4 BHK</p></div>
+</div></div></section>
+
+<section id="contact" class="band"><div class="wrap">
+<h2>Ready to start your project?</h2><p class="sub">Tell us about your plot and we will get back to you.</p>
+<form onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks, we will call you'">
+<input placeholder="Your name" required>
+<input type="tel" placeholder="Phone number" required>
+<input placeholder="Plot location">
+<select><option>Home construction</option><option>Commercial construction</option><option>Interiors / renovation</option></select>
+<button class="btn" type="submit">Request a call back</button>
+</form></div></section>
+
+<section><div class="wrap">
+<h2>FAQ</h2>
+<details><summary>What does Beyond Bricks Construction do?</summary><p>We manage home and commercial projects end to end, from design and approvals to construction and handover.</p></details>
+<details><summary>Do you take both residential and commercial projects?</summary><p>Yes. We build houses and villas as well as offices, retail and educational spaces.</p></details>
+<details><summary>How are payments handled?</summary><p>Payments are made in stages, linked to verified progress.</p></details>
+</div></section>
+
+<footer><div class="wrap">
+<div class="logo">Beyond Bricks Construction</div>
+<p>Add your address, phone and email here.</p>
+<p>© 2026 Beyond Bricks Construction. All rights reserved.</p>
+</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){try{
+const T=window.THREE;if(!T)return;
+const c=document.getElementById('bg3d');
+const r=new T.WebGLRenderer({canvas:c,antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,2));
+const s=new T.Scene();s.background=new T.Color(0x14120d);s.fog=new T.Fog(0x14120d,45,120);
+const cam=new T.PerspectiveCamera(50,1,.1,300);
+s.add(new T.AmbientLight(0xffffff,.6));
+const dl=new T.DirectionalLight(0xffd9a8,.9);dl.position.set(20,40,15);s.add(dl);
+s.add(new T.GridHelper(220,110,0x5a4a30,0x2b2518));
+const F=12,H=2.4,floors=[];
+const slabM=new T.MeshStandardMaterial({color:0xcfc8b8,roughness:.8}),colM=new T.MeshStandardMaterial({color:0x8a8272,roughness:.9}),glassM=new T.MeshStandardMaterial({color:0x3a5a70,transparent:true,opacity:.5,roughness:.2}),yM=new T.MeshStandardMaterial({color:0xd9762b,roughness:.6});
+for(let i=0;i<F;i++){const g=new T.Group();g.position.y=i*H;
+const sl=new T.Mesh(new T.BoxGeometry(14,.4,10),slabM);sl.position.y=.2;g.add(sl);
+for(let x=0;x<4;x++)for(let z=0;z<3;z++){const k=new T.Mesh(new T.BoxGeometry(.5,H-.4,.5),colM);k.position.set(-6.5+x*13/3,.4+(H-.4)/2,-4.5+z*4.5);g.add(k)}
+const gl=new T.Mesh(new T.BoxGeometry(13.4,H-.5,9.4),glassM);gl.position.y=.4+(H-.5)/2;g.add(gl);
+g.visible=false;s.add(g);floors.push(g)}
+for(let i=0;i<16;i++){const h=4+Math.random()*18,a=Math.random()*6.28,d=32+Math.random()*45;
+const b=new T.Mesh(new T.BoxGeometry(5+Math.random()*5,h,5+Math.random()*5),new T.MeshStandardMaterial({color:0x2a261c,roughness:1}));
+b.position.set(Math.cos(a)*d,h/2,Math.sin(a)*d);s.add(b)}
+const cr=new T.Group();cr.position.set(11,0,-8);s.add(cr);
+const mH=F*H+5;
+const mast=new T.Mesh(new T.BoxGeometry(1,mH,1),yM);mast.position.y=mH/2;cr.add(mast);
+const top=new T.Group();top.position.y=mH;cr.add(top);
+const jib=new T.Mesh(new T.BoxGeometry(24,.6,.6),yM);jib.position.x=-6;top.add(jib);
+const cw=new T.Mesh(new T.BoxGeometry(2.5,1.6,1.6),colM);cw.position.x=8;top.add(cw);
+const cab=new T.Mesh(new T.BoxGeometry(1.4,1.4,1.4),yM);cab.position.set(1,1,0);top.add(cab);
+const rope=new T.Mesh(new T.BoxGeometry(.08,8,.08),colM);rope.position.set(-14,-4,0);top.add(rope);
+const load=new T.Mesh(new T.BoxGeometry(1.6,.8,1.6),yM);load.position.set(-14,-8.4,0);top.add(load);
+function size(){r.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
+addEventListener('resize',size);size();
+const slow=matchMedia('(prefers-reduced-motion: reduce)').matches?.3:1,L=F*2+6;
+const t0=performance.now();
+function loop(){const t=(performance.now()-t0)/1000*slow,cy=t%L;
+floors.forEach((g,i)=>{const p=(cy-i*2)/1.5;g.visible=p>0&&cy<L-2;g.scale.y=Math.max(.01,Math.min(1,p))});
+top.rotation.y=Math.sin(t*.25)*.7;
+const a=t*.06,sy=scrollY*.012;
+cam.position.set(Math.cos(a)*40,14+sy,Math.sin(a)*40);cam.lookAt(0,12,0);
+r.render(s,cam);requestAnimationFrame(loop)}
+loop();
+}catch(e){console.error(e)}})();
+</script>
+</body>
+</html>
