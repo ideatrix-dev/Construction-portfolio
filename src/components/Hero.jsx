@@ -1,18 +1,34 @@
+const headline = "More Than Buildings. We Create Lasting Impressions.";
+const words = headline.split(" ");
+
 const stats = [
-  { value: '[##]+', label: 'Projects delivered' },
-  { value: '[##]+', label: 'Quality checks' },
-  { value: '[##]', label: 'Sq.ft. built' },
-  { value: '[##]+', label: 'Cities served' },
-]
+  { value: "250+", label: "Projects delivered" },
+  { value: "20+", label: "Quality checks" },
+  { value: "10K", label: "Sq.ft. built" },
+  { value: "30+", label: "Districts served" },
+];
 
 export default function Hero() {
   return (
     <div className="hero" id="top">
       <div className="wrap">
-        <h1>We build more than walls. We build what lasts.</h1>
+        <h1 aria-label={headline}>
+          {words.map((word, i) => (
+            <span key={i}>
+              <span
+                className="word"
+                style={{ animationDelay: `${0.15 + i * 0.09}s` }}
+              >
+                {word}
+              </span>
+              {i < words.length - 1 ? " " : ""}
+            </span>
+          ))}
+        </h1>
         <p>
-          Beyond Bricks Construction delivers homes and commercial spaces from design to handover,
-          with clear pricing and stage-wise quality checks.
+          Beyond Bricks Construction delivers homes and commercial spaces across
+          Karnataka, from design to handover, with clear pricing and stage-wise
+          quality checks.
         </p>
         <a className="btn" href="#contact">
           Start your project
@@ -27,5 +43,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
 }

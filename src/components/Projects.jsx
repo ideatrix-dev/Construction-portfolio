@@ -1,7 +1,7 @@
 const projects = [
-  { type: 'RESIDENTIAL', name: 'Project name', meta: '0000 sq.ft. · City' },
-  { type: 'COMMERCIAL', name: 'Project name', meta: '00000 sq.ft. · City' },
-  { type: 'RESIDENTIAL', name: 'Project name', meta: '0000 sq.ft. · City' },
+  { type: 'RESIDENTIAL', name: 'The Courtyard House', meta: '3,200 sq.ft. · Bengaluru' },
+  { type: 'COMMERCIAL', name: 'Nexus Business Park', meta: '42,000 sq.ft. · Mysuru' },
+  { type: 'RESIDENTIAL', name: 'Lakeview Villas', meta: '8,500 sq.ft. · Udupi' },
 ]
 
 export default function Projects() {
@@ -9,7 +9,9 @@ export default function Projects() {
     <section id="projects" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <h2>Recent projects</h2>
-        <p className="sub">Replace these placeholders with your own completed work.</p>
+        <p className="sub">
+          A selection of homes and commercial spaces delivered across Karnataka.
+        </p>
         <div className="grid">
           {projects.map((project, index) => (
             <div className="card" key={index}>

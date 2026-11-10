@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png'
+
 const links = [
   { href: '#services', label: 'Services' },
   { href: '#projects', label: 'Projects' },
@@ -10,7 +12,7 @@ export default function Header() {
     <header>
       <div className="wrap nav">
         <a href="#top" className="logo">
-          Beyond <span>Bricks</span>
+          <img src={logo} alt="Beyond Bricks Construction" />
         </a>
         <nav>
           {links.map((link) => (

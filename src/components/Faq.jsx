@@ -12,6 +12,16 @@ const faqs = [
     question: 'How are payments handled?',
     answer: 'Payments are made in stages, linked to verified progress.',
   },
+  {
+    question: 'How long does a typical home take to build?',
+    answer:
+      'A 2,000–3,000 sq.ft. home usually takes 10–12 months from foundation to handover, depending on design approvals and site conditions.',
+  },
+  {
+    question: 'Do you provide a warranty?',
+    answer:
+      'Yes. The structure is covered for 10 years, waterproofing for 5 years, and all finishing work for 1 year.',
+  },
 ]
 
 export default function Faq() {

@@ -1,4 +1,4 @@
-const districts = [
+export const districts = [
   'Bagalkote',
   'Ballari',
   'Belagavi',
